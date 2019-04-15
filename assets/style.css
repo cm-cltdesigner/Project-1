@@ -1,0 +1,34 @@
+
+.top { 
+    background: url("banner.png") no-repeat center center; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: contain;
+  }
+
+body {
+    padding: 30px;
+    background-color: black;
+    opacity: 1;
+    color: white;
+}
+
+#cardWeather {
+    color:  #350e60;
+}
+
+hr {
+color: white;
+border-width: thick;
+border: dotted;
+}
+
+@media screen and (max-width: 800px) {
+.top {
+    background: url("banner.png") no-repeat center center; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+}
