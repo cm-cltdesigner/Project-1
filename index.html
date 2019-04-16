@@ -91,8 +91,22 @@
         </div>
         </form>
     </div>
-    </div>
+    <div class="progress">
+            <div class="indeterminate"></div>
+        </div></div>
 
+
+<!-- Loading Button -->
+    <!-- <button class="btn btn-primary" type="button" disabled>
+            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+            <span class="sr-only">Loading...</span>
+          </button>
+          <button class="btn btn-primary" type="button" disabled>
+            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+            Loading...
+          </button> -->
+
+<!-- Additional Placement -->
     <div class="row">
         <div class="col-8">
             <h1>ISS MAP</h1>
@@ -115,7 +129,16 @@
                 <center><img src="assets/moon.gif" class="img-fluid" style="height: 200px"></center>
             </div><br>
 
+<!-- Chat Hide/Show Functionality -->
+<script>
+    $("#hide").click(function(){
+  $("p").hide();
+});
 
+$("#show").click(function(){
+  $("p").show();
+});
+</script>
 </body>
 
 </html>
