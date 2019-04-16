@@ -21,6 +21,7 @@
             aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-togg
             ler-icon"></span>
+
         </button>
         <a class="navbar-brand" href="#">Menu</a>
 
@@ -40,8 +41,18 @@
                     id="logInput">
                 <button class="btn btn-outline-success my-2 my-sm-0" id="submitLogin" type="submit">Log-In</button>
             </form>
-        </div>
-    </nav>
+        </div></nav>
+        <form id="chatbox" style="width: 300px" class="invis"> <div class="form-group">
+                <label for="exampleFormControlTextarea1">Chat</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" cols="50"></textarea>
+              </div>
+            </form>
+   
+    <!-- Chat Logic -->
+<script>
+  
+</script>
+
     <!-- Logo Banner -->
     <div class="jumbotron jumbotron-fluid top">
         <div class="container" id="banner" style="height: 300px">
@@ -52,8 +63,7 @@
         <div class="col-8">
             <h1>What is Clear Moon?</h1><br>
             Welcome to an application that will help all astronomy fans to forcast Moon Phases within 4 days.
-            Application pulls
-            information with moon rises and moon sets with weather information as well as viewing times for the
+            Application pulls information with moon rises and moon sets with weather information as well as viewing times for the
             international space station that's based on the users location. It's time to bring awarenass to more
             intellectual date nights...
         </div>
@@ -91,20 +101,16 @@
         </div>
         </form>
     </div>
-    <div class="progress">
-            <div class="indeterminate"></div>
-        </div></div>
-
 
 <!-- Loading Button -->
-    <!-- <button class="btn btn-primary" type="button" disabled>
+    <button class="btn btn-primary" type="button" disabled>
             <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
             <span class="sr-only">Loading...</span>
           </button>
           <button class="btn btn-primary" type="button" disabled>
             <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
             Loading...
-          </button> -->
+          </button>
 
 <!-- Additional Placement -->
     <div class="row">
@@ -129,16 +135,23 @@
                 <center><img src="assets/moon.gif" class="img-fluid" style="height: 200px"></center>
             </div><br>
 
+<!--jQuery Link-->
+<script src="https://code.jquery.com/jquery-3.4.0.min.js"   integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="   crossorigin="anonymous"></script>
+
 <!-- Chat Hide/Show Functionality -->
 <script>
-    $("#hide").click(function(){
-  $("p").hide();
-});
-
-$("#show").click(function(){
-  $("p").show();
-});
+    
+    $("#submitLogin").on("click", function(e) {
+        e.preventDefault();
+        if ($("#chatbox").hasClass("invis")){ //if its not there
+            $("#chatbox").removeClass("invis"); //making it invis- IS NOT display
+        } //if whats in paren is true do whats inthe curly braces
+        else {
+        $("#chatbox").addClass("invis"); //adding class
+        }
+    });
 </script>
+
 </body>
 
 </html>
