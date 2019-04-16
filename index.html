@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Links -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/style.css">
+    <title>Clear Moon App</title>
+</head>
+
+<body>
+    <!-- Nav Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
+            aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-togg
+            ler-icon"></span>
+
+        </button>
+        <a class="navbar-brand" href="#">Menu</a>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About Us</a>
+                </li>
+
+            </ul>
+            <!-- Log-Input/Submit -->
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Create Log-In Here" aria-label="Search"
+                    id="logInput">
+                <button class="btn btn-outline-success my-2 my-sm-0" id="submitLogin" type="submit">Log-In</button>
+            </form>
+        </div></nav>
+        <form id="chatbox" style="width: 300px" class="invis"> <div class="form-group">
+                <label for="exampleFormControlTextarea1">Chat</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" cols="50"></textarea>
+              </div>
+            </form>
+   
+
+
+    <!-- Logo Banner -->
+    <div class="jumbotron jumbotron-fluid top">
+        <div class="container" id="banner" style="height: 300px">
+        </div>
+    </div>
+    <!-- Intro -->
+    <div class="row" id="description">
+        <div class="col-8">
+            <h1>What is Clear Moon?</h1><br>
+            Welcome to an application that will help all astronomy fans to forcast Moon Phases within 4 days.
+            Application pulls information with moon rises and moon sets with weather information as well as viewing times for the
+            international space station that's based on the users location. It's time to bring awarenass to more
+            intellectual date nights...
+        </div>
+        <div class="col-4">
+            <!-- Weather Wigdet Section -->
+            <div class="card border-light mb-3" style="max-width: 18rem;" id="cardWeather">
+                <div class="card-header">Weather Placeholder</div>
+                <div class="card-body">
+                    <h5 class="card-title">Widget</h5>
+                    <p class="card-text">Weather api should display here...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <div class="row">
+        <div class="col-8">
+            <h5 class="card-title">Moon Phase</h5>
+            <p class="card-text">Moon Phase api should display here...</p>
+        </div>
+    </div>
+    </div>
+    </div>
+
+    <!-- User's Moon Phase Search -->
+    <div class="row">
+        <div class="col-4"><label for="start">Search Date:</label>
+            <input type="date" id="start" name="trip-start" value="2019-04-15" min="2019-04-01" max="2019-12-31">
+            <form>
+                <input type="text" class="form-control" placeholder="City">
+                <input type="text" class="form-control" placeholder="State">
+                <input type="text" class="form-control" placeholder="Zip">
+                <button type="button" class="btn btn-light">Search Moon Phase</button>
+        </div>
+        </form>
+    </div>
+
+<!-- Loading Button -->
+    <!-- <button class="btn btn-primary" type="button" disabled>
+            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+            <span class="sr-only">Loading...</span>
+          </button>
+          <button class="btn btn-primary" type="button" disabled>
+            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+            Loading...
+          </button> -->
+
+<!-- Additional Placement (GEOLOC & ISS)-->
+
+<!-- Page Break -->
+                <center><img src="assets/moon.gif" class="img-fluid" style="height: 200px"></center>
+            </div><br>
+
+<!--jQuery Link-->
+<script src="https://code.jquery.com/jquery-3.4.0.min.js"   integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="   crossorigin="anonymous"></script>
+
+<!-- Chat Hide/Show Functionality -->
+<script>
+    
+    $("#submitLogin").on("click", function(e) {
+        e.preventDefault();
+        if ($("#chatbox").hasClass("invis")){ //if its not there
+            $("#chatbox").removeClass("invis"); //making it invis- IS NOT display
+        } //if whats in paren is true do whats inthe curly braces
+        else {
+        $("#chatbox").addClass("invis"); //adding class
+        }
+    });
+</script>
+
+</body>
+
+</html>
