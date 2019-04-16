@@ -1,3 +1,6 @@
+/* .gif {
+    background-image: url("moon.gif") center no-repeat;
+ } */
 
 .top { 
     background: url("banner.png") no-repeat center center; 
@@ -18,10 +21,16 @@ body {
     color:  #350e60;
 }
 
+
 hr {
 color: white;
 border-width: thick;
 border: dotted;
+}
+
+#iss {
+position: absolute;
+padding: 40px;
 }
 
 @media screen and (max-width: 800px) {
